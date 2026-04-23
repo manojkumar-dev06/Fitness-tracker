@@ -1,0 +1,139 @@
+/* Dashboard specific styles */
+:root {
+  --primary: #4361ee;
+  --secondary: #3f37c9;
+  --info: #4895ef;
+  --success: #4cc9f0;
+  --warning: #f72585;
+  --light: #f8f9fa;
+  --dark: #212529;
+}
+
+.dashboard-card {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(67, 97, 238, 0.15);
+}
+
+.dashboard-card .card-body {
+  padding: 1.5rem;
+}
+
+.dashboard-card .card-title {
+  color: #6c757d;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Icon styles */
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.icon-circle-sm {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+/* Background utilities */
+.bg-soft-primary { background-color: rgba(67, 97, 238, 0.1) !important; }
+.bg-soft-info { background-color: rgba(72, 149, 239, 0.1) !important; }
+.bg-soft-success { background-color: rgba(76, 201, 240, 0.1) !important; }
+.bg-soft-warning { background-color: rgba(247, 37, 133, 0.1) !important; }
+
+/* Activity list styles */
+.activity-list .list-group-item {
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.5rem;
+  transition: all 0.2s ease;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.activity-list .list-group-item:last-child {
+  margin-bottom: 0;
+}
+
+.activity-list .list-group-item:hover {
+  background-color: #f8f9ff;
+  transform: translateX(5px);
+  box-shadow: 0 2px 10px rgba(67, 97, 238, 0.1);
+}
+
+/* Stats highlight */
+.stats-highlight {
+  background: linear-gradient(135deg, #4361ee 0%, #3f37c9 100%);
+  color: white;
+}
+
+.stats-highlight .text-muted,
+.stats-highlight .card-title {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-card {
+    margin-bottom: 1rem;
+  }
+  
+  .icon-circle {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .activity-list .list-group-item {
+    padding: 0.75rem 1rem;
+  }
+  
+  .dashboard-card .card-body {
+    padding: 1.25rem;
+  }
+}

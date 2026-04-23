@@ -1,0 +1,183 @@
+/* Exercise Page Styles */
+.exercise-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0;
+}
+
+/* Exercise Option Cards */
+.exercise-option-card {
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-left: 4px solid var(--card-color);
+  overflow: hidden;
+}
+
+.exercise-option-card:hover:not(.disabled) {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.exercise-option-card.disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.exercise-icon-container {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(78, 115, 223, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.exercise-option-card:hover:not(.disabled) .exercise-icon-container {
+  transform: scale(1.1);
+  background-color: rgba(78, 115, 223, 0.2);
+}
+
+.exercise-option-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+}
+
+.exercise-option-desc {
+  color: #718096;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  min-height: 40px;
+}
+
+/* Recent Workouts Section */
+.recent-workouts-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.recent-workouts-card .card-header {
+  background-color: #f8f9fc;
+  border-bottom: 1px solid #e3e6f0;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.recent-workouts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.recent-workout-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: #f8f9fc;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.recent-workout-item:hover {
+  background-color: #edf2f7;
+  transform: translateX(5px);
+}
+
+.recent-workout-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  color: #4a5568;
+  flex-shrink: 0;
+}
+
+.recent-workout-details {
+  flex: 1;
+}
+
+.recent-workout-name {
+  font-weight: 500;
+  color: #2d3748;
+  margin-bottom: 0.1rem;
+}
+
+.recent-workout-time {
+  font-size: 0.75rem;
+  color: #718096;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 1.5rem;
+  }
+  
+  .exercise-option-card {
+    margin-bottom: 1rem;
+  }
+  
+  .exercise-option-title {
+    font-size: 1.1rem;
+  }
+  
+  .exercise-option-desc {
+    font-size: 0.8rem;
+  }
+}
+
+/* Dark Mode Support */
+[data-bs-theme="dark"] {
+  .exercise-option-card {
+    background-color: #2d3748;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
+  }
+  
+  .exercise-option-title {
+    color: #e2e8f0;
+  }
+  
+  .exercise-option-desc {
+    color: #a0aec0;
+  }
+  
+  .recent-workouts-card .card-header {
+    background-color: #2d3748;
+    border-bottom-color: #4a5568;
+    color: #e2e8f0;
+  }
+  
+  .recent-workout-item {
+    background-color: #2d3748;
+  }
+  
+  .recent-workout-item:hover {
+    background-color: #4a5568;
+  }
+  
+  .recent-workout-name {
+    color: #e2e8f0;
+  }
+  
+  .recent-workout-time {
+    color: #a0aec0;
+  }
+}
